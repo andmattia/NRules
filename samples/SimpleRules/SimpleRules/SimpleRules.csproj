@@ -37,14 +37,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NRules">
-      <HintPath>..\..\..\binaries\NRules\net45\NRules.dll</HintPath>
+    <Reference Include="NRules, Version=0.8.4.0, Culture=neutral, PublicKeyToken=8ad544355a4a2176, processorArchitecture=MSIL">
+      <HintPath>..\packages\NRules.Runtime.0.8.4\lib\net45\NRules.dll</HintPath>
     </Reference>
-    <Reference Include="NRules.Fluent">
-      <HintPath>..\..\..\binaries\NRules\net45\NRules.Fluent.dll</HintPath>
+    <Reference Include="NRules.Fluent, Version=0.8.4.0, Culture=neutral, PublicKeyToken=8ad544355a4a2176, processorArchitecture=MSIL">
+      <HintPath>..\packages\NRules.Fluent.0.8.4\lib\net45\NRules.Fluent.dll</HintPath>
     </Reference>
-    <Reference Include="NRules.RuleModel">
-      <HintPath>..\..\..\binaries\NRules\net45\NRules.RuleModel.dll</HintPath>
+    <Reference Include="NRules.RuleModel, Version=0.8.4.0, Culture=neutral, PublicKeyToken=8ad544355a4a2176, processorArchitecture=MSIL">
+      <HintPath>..\packages\NRules.RuleModel.0.8.4\lib\net45\NRules.RuleModel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

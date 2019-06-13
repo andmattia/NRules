@@ -1,6 +1,8 @@
-﻿using System.Reflection;
+﻿using System.Linq;
+using System.Reflection;
 using NRules.Fluent;
 using NRules.Samples.SimpleRules.Domain;
+using NRules.Samples.SimpleRules.Rules;
 
 namespace NRules.Samples.SimpleRules
 {
@@ -47,6 +49,8 @@ namespace NRules.Samples.SimpleRules
             //Start match/resolve/act cycle
             session.Update(customer1);
             session.Fire();
+
+            var z = session.Query<TestObj>().ToList();
         }
     }
 }

@@ -15,7 +15,8 @@ namespace NRules.Samples.SimpleRules.Rules
                 .Not<Account>(a => a.Owner == customer, a => a.IsActive, a => a.IsDelinquent);
 
             Then()
-                .Do(ctx => Console.WriteLine("Customer {0} does not have active delinquent accounts", customer.Name));
+                .Do(ctx => Console.WriteLine("Customer {0} does not have active delinquent accounts", customer.Name))
+                .Do(ctx => ctx.Insert(new TestObj() { Name = "pippo" })); ;
         }
     }
 }

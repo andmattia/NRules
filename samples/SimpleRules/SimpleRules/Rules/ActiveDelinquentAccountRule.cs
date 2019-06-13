@@ -15,7 +15,16 @@ namespace NRules.Samples.SimpleRules.Rules
                 .Exists<Account>(a => a.Owner == customer, a => a.IsActive, a => a.IsDelinquent);
 
             Then()
-                .Do(ctx => Console.WriteLine("Customer {0} has active delinquent accounts", customer.Name));
+                .Do(ctx =>
+
+                    Console.WriteLine("Customer {0} has active delinquent accounts", customer.Name)
+                );
+
         }
+    }
+
+    public class TestObj
+    {
+        public string Name { get; set; }
     }
 }
